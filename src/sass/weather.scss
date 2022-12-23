@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.weather {
+  background-color: lightblue;
+  padding: 40px;
+  border-radius: 15px;
+  @include breakpoints(sm) {
+    padding: 15px 10px;
+  }
+  @include breakpoints(md) {
+    padding: 30px 20px;
+  }
+  &__title {
+    text-align: center;
+    color: blueviolet;
+  }
+  &__site {
+    text-align: center;
+    color: rgb(152, 51, 246);
+  }
+
+  &__data {
+    @include breakpoints(sm) {
+      display: flex;
+      margin-top: 20px;
+    }
+    &__picture {
+      text-align: center;
+      img {
+        @include breakpoints(sm) {
+          font-size: 10rem;
+          height: 6rem;
+        }
+      }
+    }
+    &__information {
+      &__subtitle {
+        font-weight: 800;
+        text-align: center;
+        color: rgb(152, 51, 246);
+        @include breakpoints(md) {
+          text-align: center;
+        }
+      }
+      &__text {
+        p {
+          font-weight: 800;
+          color: black;
+          span {
+            color: rgb(109, 36, 176);
+          }
+        }
+      }
+    }
+  }
+  &__converter {
+    text-align: center;
+    button {
+      background-color: blueviolet;
+      color: white;
+      border: none;
+      padding: 5%;
+      border-radius: 10px;
+    }
+  }
+}
